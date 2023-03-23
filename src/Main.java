@@ -14,7 +14,7 @@ public class Main {
         System.out.println(  "hay un true?  "+rb.isDespertar());
 
         System.out.println(levantar);
-
+        //Probando Giuli
 
         System.out.println("ingrese los pasos que el robot avanzará: ");
         int pasos=sc.nextInt();
