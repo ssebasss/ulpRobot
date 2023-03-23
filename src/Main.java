@@ -16,17 +16,20 @@ public class Main {
         System.out.println(levantar);
         //Probando Giuli
 
-        System.out.println("ingrese los pasos que el robot avanzará: ");
-        int pasos=sc.nextInt();
-        rb.avanzar(pasos, levantar);
-        System.out.println();
-        System.out.println("ingrese los pasos que el robot retrocederá: ");
-        int pasosAtras=sc.nextInt();
-        rb.retroceder(pasosAtras, levantar);
-        System.out.println("-----------------------cargando bateria------------------------------");
-        rb.recargar();
-        System.out.println("-----------------------bateria esta cargada? ------------------------------");
-        rb.bateriaLlena();
+        while (levantar==true){
+            System.out.println("ingrese los pasos que el robot avanzará: ");
+            int pasos=sc.nextInt();
+            rb.avanzar(pasos, levantar);
+            System.out.println();
+            System.out.println("ingrese los pasos que el robot retrocederá: ");
+            int pasosAtras=sc.nextInt();
+            rb.retroceder(pasosAtras, levantar);
+            System.out.println("-----------------------cargando bateria------------------------------");
+            rb.recargar();
+            System.out.println("-----------------------bateria esta cargada? ------------------------------");
+            rb.bateriaLlena();
+        }
+
 
     }
 }
