@@ -103,7 +103,8 @@ public class Robot {
     public void recargar() {
         System.out.println("la bateria antes de descargar: " + getBateria().toString());
         bateria.setCarga(1000);
-        System.out.println("la bateria antes de descargar: " + getBateria().toString());
+        System.out.println("la bateria despues de descargar: " + getBateria().toString());
+        System.out.println();
     }
 
 
@@ -116,6 +117,33 @@ public class Robot {
             return false;
         }
 
+
+    }
+
+    public boolean bateriaVacia() {
+        if (bateria.getCarga() == 0) {
+            System.out.println("la bateria esta vacia");
+            energiaActual();
+            System.out.println();
+            return true;
+        } else {
+            System.out.println("la bateria no esta vacia " );
+            energiaActual();
+            System.out.println();
+            return false;
+        }
+    }
+
+    public void energiaActual(){
+        System.out.println("la energia actual de la bateria es "+bateria.getCarga());
+        System.out.println();
+
+    }
+
+    public boolean dormirRobot(){
+        despertar = false;
+        System.out.println("robot desactivado");
+        return despertar;
     }
 
 
