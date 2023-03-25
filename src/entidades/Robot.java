@@ -34,8 +34,8 @@ public class Robot {
     public boolean despertar() {
         boolean despiertando = sc.next().equalsIgnoreCase("si") ? true : false;
         if (despiertando == true) {
-            despertar = true;
-            System.out.println("robot encendido");
+            this.despertar = true;
+            System.out.println("robot encendido, lo tendrá Juan");
         } else {
             System.out.println("robot Apagado!!! ");
         }
@@ -58,8 +58,6 @@ public class Robot {
                     pasos = sc.nextInt();
                 }
             }
-
-
             if (bateria.getCarga() - ((unidades_consumidas_por_paso * pasos) / 100) < 0) {
                 System.out.println("No hay suficiente carga para realizar los pasos pedidos");
             }
@@ -87,7 +85,6 @@ public class Robot {
                     pasosAtras = sc.nextInt();
                 }
             }
-
             if (bateria.getCarga() - ((unidades_consumidas_por_paso * pasosAtras) / 100) < 0) {
                 System.out.println("No hay suficiente carga para realizar los pasos pedidos");
             }
@@ -116,8 +113,6 @@ public class Robot {
             System.out.println("no esta llena");
             return false;
         }
-
-
     }
 
     public boolean bateriaVacia() {
@@ -142,8 +137,8 @@ public class Robot {
 
     public boolean dormirRobot(){
         despertar = false;
-        System.out.println("robot desactivado");
-        return despertar;
+        System.out.println("ESTOY EN EL METODO.... robot desactivado, atributo despertar= "+this.despertar);
+        return false;
     }
 
 
